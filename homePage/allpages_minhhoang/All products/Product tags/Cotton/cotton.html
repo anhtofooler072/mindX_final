@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - OKAB</title>
+      <link rel="stylesheet" href="../../allProductheading.css" />
+      <link rel="stylesheet" href="../../allProductshowcase.css">
+      <link rel="stylesheet" href="../../allProductRight.css">
+      <link href="https://cdn.jsdelivr.net/npm/nouislider/distribute/nouislider.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="../../loadingScreen/loadingScreen.css">
+      <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com" />
+      <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin />
+      <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet" />
+      
+      <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+   <div id="preloader"></div>
+  <header id="header" class="dima-header">
+    <div class="top-bar-header">
+        <div class="container">
+            <div class="left-header inl-block">   
+                <div class="calendar">                
+                    <i class="fa fa-calendar-alt"></i>
+                    <span id="day" class="day"></span>
+                    <span id="month" class="month"></span>
+                    <span id="day2" class="day2"></span>
+                    <span id="year" class="year"></span>
+                </div> 
+                    <div class="phone inl-block">
+                        <i class="fa fa-phone"></i>
+                        <span class="number-phone">+213 55 66 55</span>
+                        </div>
+                </div>
+            <div class="right-header inl-block">
+                <div class="account-box inl-block">
+                    <i class="fa fa-user"></i>
+                    <span id="header-account" class="account"><a href="#">My Account</a></span>
+                </div>
+                <div class="right-icon-box inl-block">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dima-header-menu">
+        <div class="container">
+            <div class="left-menu-header inl-block">
+                <img src="https://okab.pixeldima.com/shop/wp-content/uploads/sites/5/2016/06/shop-logo.png" alt="logo">
+            </div>
+            <div class="right-menu-header inl-block">
+            <ul class="type-menu">
+                <li><a href="#">HOME</a></li>
+                <li><a href="../../allProducts.html">ALL PRODUCTS</a></li>
+                <li><a href="../../../Acessories/acessories.html">ACCESORIES</a></li>
+                <li><a href="../../../Shoes/shoes.html">SHOES</a></li>
+                <li><a href="https://link.pixeldima.com/okab">BUY NOW</a></li>
+                <li><a href="#"><i class="fa fa-search"></i></a></li>
+                <ul class="buy-header"><a href="#"><i class="fa fa-shopping-bag"></i>
+                    <span class="number-buy">0</span>
+                    <span class="price-buy">$0.00</span>
+                     <ul>
+                            <li></li>
+                        </ul> 
+                    </a></ul>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+    <!-- page title -->
+    <div class="page-title">
+      <div class="title-text">
+        <h1 class="under-title-text">Shop</h1>
+        <div class="topaz-line-break">
+                  <div class="two-slide-title"></div>
+                  <div class="circle-title"><i class="fa fa-stop" aria-hidden="true"></i>                  </div>
+                  <div class="two-slide-title"></div>
+        </div>
+        <div class="title-text-nav">
+          <span><a href="#">Home</a></span>
+          <span>/</span>
+          <span>Shop</span>
+          <span>/</span>
+          <span>cotton</span>
+        </div>
+      </div>
+    </div>
+    <!-- content -->
+    <div class="page-section-container">
+        <div class="allProduct-section-container">
+          <div class="allProduct-left">
+            <!-- all product left header  -->
+            <div class="allProduct-header">
+              <!-- all product header left -->
+              <div class="allProduct-header-left">
+                <ul class="allProduct-header-left-btn">
+                  <li><a href="#"><i class="fa fa-table" aria-hidden="true"></i>
+                  </a></li>
+                  <li><a href="#"><i class="fa fa-list" aria-hidden="true"></i>
+                  </a></li>
+                </ul>
+                 </div>
+                 <!-- all product header right -->
+                 <div class="allProduct-header-right">
+                  <ul class="allProduct-header-right-btn">
+                    <li><i id="arrowIcon" class="fa fa-arrow-up" aria-hidden="true"></i>
+                    </li>
+                  </ul>
+                  
+                  <ul class="sort-list">
+                    <li>
+                      <span class="current-sort">
+                        <span class="sort-arrow" style="float:right"><i class="fa fa-chevron-down" aria-hidden="true"></i>
+                        </span>
+                        <span class="current-sort-content">
+                          <a href="">Sort by <strong>Default Order</strong></a>
+                          
+                        </span>
+                      </span>
+                      <!-- drop down list-->
+                      <ul class="drop-down-list-sort">
+                        <li class="default-sort">
+                         Sort by <strong>Default Order</strong>
+                        </li>
+                        <li class="name-sort">
+                          Sort by <strong>Name</strong>
+                        </li>
+                        <li class="price-sort">
+                          Sort by <strong>Price</strong>
+                        </li>
+                        <li class="date-sort">
+                          Sort by <strong>Date</strong>
+                        </li>
+                        <li class="popularity-sort">
+                          Sort by <strong>Popularity</strong>
+                        </li>
+                        <li class="rating-sort">
+                          Sort by <strong>Rating</strong>
+                        </li>
+                       </ul> 
+                    </li>
+                  </ul>
+
+                 </div>
+            </div>
+          <hr>
+          <!-- all product left content -->
+            <div id="allProduct-showcase">
+            </div>
+          
+          </div>
+          <!-- all product right-->
+          <div class="allProduct-right">
+              <div class="allProduct-right-search-section">
+                <h5 class="search-bar-title">SEARCH PRODUCT</h5>
+                <form action="" class="search-bar">
+                  <span class="search-bar-icon"><i class="fa fa-search" aria-hidden="true"></i></span>
+                  <label class="screen-reader-text" for="search-bar-field">Search for:</label>
+                  <input type="search" id="search-bar-field" placeholder="Search products...">
+
+
+                </form>
+              </div>
+              <div class="products-sidebar">
+                <h5 class="products-sidebar-title">Products</h5>
+                <ul class="products-sidebar-showcase">
+
+                </ul>
+              </div>
+              <div class="sidebar-filter">
+                  <form method="get" action="">
+                    <div class="sidebar-filter-content">
+                      <div class="price-slider">
+                        <div class="price-slider-range">
+                        </div>
+                        <span class="price-slider-left"></span>
+                        <span class="price-slider-right"></span>
+                      </div>
+                      <div class="price-slider-content">
+                        <button type="submit" class="price-slider-btn">Filter</button>
+                        <div class="price-slider-amount">
+                          Price:
+                          <span class="from">$50</span>
+                            —
+                          <span class="to">$320</span>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+              </div>
+              <div class="product-tags">
+                <h5 class="product-tags-title">PRODUCT TAGS</h5>
+                <div class="tag-btn">
+                  <a href="../Black/black.html"><button href="#" class="tag-btn-content black-tags">black</button></a>
+                  <a href="../Boots/boots.html"><button  class="tag-btn-content boots-tags">boots</button></a>
+                  <a href="./cotton.html"><button  class="tag-btn-content cotton-tags">Cotton</button></a>
+                  <a href="../Glasses/glasses.html"><button class="tag-btn-content glasses-tags">glasses</button></a>
+                  <a href="../Red/red.html"><button class="tag-btn-content red-tags">Red</button></a>
+                  <a href="../Shoes/shoes.html"><button class="tag-btn-content shoes-tags">shoes</button></a>
+                  <a href="../Yepme/yepme.html"><button class="tag-btn-content yepme-tags">Yepme</button></a>
+                </div>
+              </div>
+          </div>
+        </div>
+    </div> 
+<!-- <script src="../../allProducts.js" type="module"></script> -->
+<script src="../../../data.js"></script>
+<script src="./cotton.js"></script>
+<script src="../../loadingScreen/loadingScreen.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/nouislider/distribute/nouislider.min.js"></script>
+
+</body>
+</html> 

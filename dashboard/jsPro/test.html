@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./lst.-pro.css">
+</head>
+<body>
+    <div class="modal-body">
+        <div class="modal-container">
+            <div class="modal-h"><h5>ID</h5></div>
+            <div class="modal-con">
+                <span>${getArray[i].productId}</span>
+            </div>
+        </div>
+        <div class="modal-container">
+            <div class="modal-h"><h5>Name Product</h5></div>
+            <div class="modal-con">
+                <span>${getArray[i].productName}</span>
+            </div>
+        </div>
+        <div class="modal-container">
+            <div class="modal-h"><h5>Price</h5></div>
+            <div class="modal-con">
+                <input type="number" placeholder=${getArray[i].price} min="0">
+            </div>
+        </div>
+        <div class="modal-container">
+            <div class="modal-h"><h5>Discound</h5></div>
+            <div class="modal-con">
+                <input type="" placeholder=${getArray[i].discountPrice}>
+            </div>
+        </div>
+        <div class="modal-container">
+            <div class="modal-h"><h5>Describe</h5></div>
+            <div class="modal-con">
+                <input type="" placeholder=${getArray[i].description}>
+            </div>
+        </div>
+      </div>
+</body>
+</html>

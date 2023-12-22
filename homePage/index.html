@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- meta -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <!-- css -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Poppins&display=swap"
+    rel="stylesheet">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Hedvig+Letters+Serif:opsz@12..24&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,400;1,500;1,600;1,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link rel="stylesheet" href="Okab.css" />
+  <link rel="stylesheet" href="./vender/owl.carousel.min.css" />
+  <link rel="stylesheet" href="./vender/owl.theme.default.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <!-- icon -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+
+
+<body>
+  <!-- <div id="preloader"></div> -->
+    <!-- header nhỏ ( thêm )-->
+    <div class="short-menu-header-box">
+      <div class="short-menu-header">
+          <div onclick="addOpen()" class="left-short-header">
+              <i class="fa fa-bars"></i>
+              <ul id="type-menu-small" class="type-menu-small">
+                  <li><a href="./allpages_minhhoang/All products/allProducts.html">ALL PRODUCTS</a></li>
+                  <li><a href="#">HOME</a></li>
+                  <li><a href="./allpages_minhhoang/Acessories/acessories.html">ACCESORIES</a></li>
+                  <li><a href="./allpages_minhhoang/Shoes/shoes.html">SHOES</a></li>
+                  <li><a href="#">BUY NOW</a></li>
+              </ul>
+          </div>
+          <div class="center-short-header">
+              <img src="https://okab.pixeldima.com/shop/wp-content/uploads/sites/5/2016/06/shop-logo.png" alt="logo">
+          </div>
+          <div class="right-short-header">
+              <a href="#"><i class="fa fa-search"></i></a>
+              <a class="icon-shopping-header" href="./Cart/cart.html"><i class="fa fa-shopping-bag"></i>
+                  <span id="sm-amount" class="number-buy">0</span>
+              </a>
+          </div>
+      </div>
+  </div>
+  <!-- header -->
+  <header id="header" class="dima-header">
+    <div class="top-bar-header">
+      <div class="contentContainer">
+        <div class="left-header inl-block">
+          <div class="calendar">
+            <i class="fa fa-calendar-alt"></i>
+            <span id="day" class="day"></span>
+            <span id="month" class="month"></span>
+            <span id="day2" class="day2"></span>
+            <span id="year" class="year"></span>
+          </div>
+          <div class="phone inl-block">
+            <i class="fa fa-phone"></i>
+            <span class="number-phone">+213 55 66 55</span>
+          </div>
+        </div>
+        <div class="right-header inl-block">
+          <div class="account-box inl-block">
+            <i class="fa fa-user"></i>
+            <span id="header-account" class="account"><a href="#">My Account</a></span>
+          </div>
+          <div class="right-icon-box inl-block">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="dima-header-menu">
+      <div class="contentContainer">
+        <div class="left-menu-header inl-block">
+          <img src="https://okab.pixeldima.com/shop/wp-content/uploads/sites/5/2016/06/shop-logo.png" alt="logo">
+        </div>
+        <div class="right-menu-header inl-block">
+          <ul class="type-menu">
+            <li><a href="#">HOME</a></li>
+            <li><a href="./allpages_minhhoang/All products/allProducts.html">ALL PRODUCTS</a></li>
+            <li><a href="./allpages_minhhoang/Acessories/acessories.html">ACCESORIES</a></li>
+            <li><a href="./allpages_minhhoang/Shoes/shoes.html">SHOES</a></li>
+            <li><a href="#">BUY NOW</a></li>
+            <li><a href="#"><i class="fa fa-search"></i></a></li>
+            <ul class="buy-header"><a href="./Cart/cart.html"><i class="fa fa-shopping-bag"></i>
+                <span id="amount" class="number-buy">0</span>
+                <span id="totalPrices" class="price-buy">$0.00</span>
+              </a>
+              <ul class="buy-header-box">
+                <div class="buy-container-header-box">
+                  <!-- thêm phần box giỏ đồ trên header -->
+                  <li class="item-buy-amount-box item-added-box">
+                    <div class="item-added-box" id="QAcart_Box">
+
+                    </div>
+                    <!-- <img class="item-buy-pic" src="https://okab.pixeldima.com/shop/wp-content/uploads/sites/5/2016/04/product2-582x652.jpg" alt="img-ảnh đồ mua"> -->
+                    <!-- <div class="item-detail-price inl-block"> -->
+                      <!-- <p class="item-name-buy inl-block">Boot</p> -->
+                      <!-- <p class="item-amount-price">5 x $290.00</p> -->
+                    <!-- </div> -->
+                  </li>
+                  <li class="total-money-item">
+                    <p class="total-text inl-block">Subtotal :</p>
+                    <p class="total-money inl-block" id="Subtotal_QA">$0.00</p>
+                  </li>
+                  <li class="button-wallet-box">
+                    <a href="./Cart/cart.html" class="view-cart"><button class="view-cart">View Cart</button></a>
+                    <a href="./checkout/checkout.html" class="check-out">
+                      <button>CheckOut</button>
+                    </a>                      
+                  </li>
+                </div>
+              </ul>
+            </ul>
+          </ul>
+          <!-- <ul>
+                              <li></li>
+                          </ul> -->
+          </a></ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+  </header>
+  <!-- slider -->
+  <section class="dima-slider">
+    <div class="owl-carousel slider-animation owl-theme">
+      <div class="contentContainer">
+        <div class="item">
+          <div class="slider-1">
+            <div class="event-description inl-block">
+              <p class="title-slider">The Sales Event</p>
+              <p class="discount-slider"><span class="discount-text">UP TO </span><span class="discount-off">70%
+                  OFF</span></p>
+              <p class="description-slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                do eiusmod tempor incididunt ut labore</p>
+              <button class="shop-now-slider">SHOP NOW</button>
+            </div>
+            <img src="https://okab.pixeldima.com/shop/wp-content/uploads/sites/5/revslider/shop/slide-element-1.jpg"
+              alt="ảnh balo">
+          </div>
+        </div>
+      </div>
+      <div class="contentContainer">
+        <div class="item">
+          <div class="slider-2">
+            <img class="img-slider-2"
+              src="https://okab.pixeldima.com/shop/wp-content/uploads/sites/5/revslider/shop/slide-element-2.jpg"
+              alt="Second slide">
+            <div class="event-description container-fluid inl-block">
+              <p class="title-slider">Accessories Special Offer</p>
+              <p class="discount-slider"><span class="discount-text">NOW </span><span class="discount-off">20%
+                  OFF</span></p>
+              <p class="description-slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                do eiusmod tempor incididunt ut labore</p>
+              <button class="shop-now-slider">SHOP NOW</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- body -->
+  <div class="post-content">
+    <!-- 3 ảnh banner -->
+    <section class="page-banner-box contentContainer">
+      <section class="page-banner">
+        <img class="banner-img" src="https://okab.pixeldima.com/shop/wp-content/uploads/sites/5/2016/06/banner1.jpg"
+          alt="ảnh banner">
+        <div class="banner-detail">
+          <p class="title-banner">70% OFF</p>
+          <p class="detail-banner">Lorem ipsum dolor sit Hello amet.</p>
+        </div>
+      </section>
+      <section class="page-banner">
+        <img class="banner-img" src="https://okab.pixeldima.com/shop/wp-content/uploads/sites/5/2016/06/banner2.jpg"
+          alt="ảnh banner">
+        <div class="banner-detail">
+          <p class="title-banner">HOODIES</p>
+          <p class="detail-banner">Lorem ipsum dolor sit Hello amet.</p>
+        </div>
+      </section>
+      <section class="page-banner">
+        <img class="banner-img" src="	https://okab.pixeldima.com/shop/wp-content/uploads/sites/5/2016/06/banner3.jpg"
+          alt="ảnh banner">
+        <div class="banner-detail">
+          <p class="title-banner">SUITS</p>
+          <p class="detail-banner">Lorem ipsum dolor sit Hello amet.</p>
+        </div>
+      </section>
+    </section>
+    <!-- arrival -->
+    <section class="arrival-box">
+      <div class="title-arrival-box contentContainer">
+        <h3 class="title-arrival">NEW ARRIVAL</h3>
+        <div class="small-line-title">
+          <div class="two-slide-title"></div>
+          <div class="circle-title"></div>
+          <div class="two-slide-title"></div>
+        </div>
+      </div>
+    </section>
+    <!-- phần item bên trong coi chừng nó trùng tên xung đột -->
+    <section class="item-list-box">
+      <div class="item-list contentContainer">
+        <div id="item-list-arriva-1" class="owl-carousel item-carousel-arrvial-1 owl-theme">
+          <!-- <div class="item-buy-box inl-block">
+                  <div class="item-border-box"
+                      onmouseover="changeImage_arrival_1(this, 'https://okab.pixeldima.com/shop/wp-content/uploads/sites/5/2016/04/product8-582x650.jpg')"
+                      onmouseout="changeImage_arrival_1(this, 'https://okab.pixeldima.com/shop/wp-content/uploads/sites/5/2016/04/product8-1-582x650.jpg')">
+                      <div class="product-item" href="#">
+                          <div class="item-show">
+                              <img class="item-img"
+                                  src="https://okab.pixeldima.com/shop/wp-content/uploads/sites/5/2016/04/product8-1-582x650.jpg"
+                                  alt="ảnh giày">
+                              <img class="item-sale"
+                                  src="https://lh3.googleusercontent.com/drive-viewer/AK7aPaC3H8Tb_T9dRF4x0Wa5PfKfB0D_HK_qFI8BVr8208Sb_BodG_OChkSwqAuSxAIknpeY2Tqqd_i3d6CAPNowLNUPgkqQ=s2560"
+                                  alt="ảnh sale">
+                              <div class="button-buy-box">
+                                  <button class="button detail-item"><i class="fa fa-link"></i></button>
+                                  <button class="button buy-item" onclick=addToCart(2)><i
+                                          class="fa fa-shopping-bag"></i></button>
+                              </div>
+                          </div>
+                          <p class="item-name">SNIKSA KAHLA PLA</p>
+                      </div>
+                      <div class="item-rate">
+                          <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                              class="fa fa-star"></i><i class="fa fa-star"></i>
+                      </div>
+                  </div>
+                  <div class="item-price-box">
+                      <p class="item-price inl-block">118.00</p>
+                  </div>
+              </div> -->
+        </div>
+      </div>
+    </section>
+    <section class="dima-collection">
+      <div class="title-collection-box contentContainer">
+        <h3 class="title-collection">EXLORE OUR COLLECTION</h3>
+        <div class="small-line-title">
+          <div class="two-slide-title"></div>
+          <div class="circle-title"></div>
+          <div class="two-slide-title"></div>
+        </div>
+      </div>
+      <div class="item-collection-box contentContainer">
+        <div class="item-collect">
+          <div class="img-collect">
+            <img src="./asset/h1-ibanner-3.jpg" alt="ảnh banner">
+            <div class="trademark-collect">
+              <p>NORTH FACE</p>
+              <h3>GYM BACKPACK</h3>
+            </div>
+          </div>
+          <div class="explore-collect">
+            <a href="#">
+              <h6>EXPLORE COLLECTION</h6>
+              <span><i class="fa fa-arrow-right"></i></span>
+            </a>
+          </div>
+        </div>
+        <div class="item-collect">
+          <div class="img-collect">
+            <img src="./asset/h1-banner-1.jpg" alt="ảnh banner">
+            <div class="trademark-collect txt-white">
+              <p>ADIDAS</p>
+              <h3>RUN DIVISION</h3>
+            </div>
+          </div>
+          <div class="explore-collect">
+            <a href="#">
+              <h6>EXPLORE COLLECTION</h6>
+              <span><i class="fa fa-arrow-right"></i></span>
+            </a>
+          </div>
+        </div>
+        <div class="item-collect">
+          <div class="img-collect">
+            <img src="./asset/h1-ibanner-2.jpg" alt="ảnh banner">
+            <div class="trademark-collect">
+              <p>NIKE</p>
+              <h3>DRI-FIT SPORT BC</h3>
+            </div>
+          </div>
+          <div class="explore-collect">
+            <a class="explore-collect-3" href="#">
+              <h6>EXPLORE COLLECTION</h6>
+              <span><i class="fa fa-arrow-right"></i></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- ==================================================== -->
+
+  <!-- spring shop -->
+  <div class="spring-shop">
+    <div class="spring-shop-content">
+      <h2>THE SPRING <span style="color:red">SHOP</span></h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+      <a href="#">SHOP NOW</a>
+
+    </div>
+  </div>
+  <section class="arrival-box">
+    <div class="title-arrival-box contentContainer">
+      <h3 class="title-arrival">NEW ARRIVAL</h3>
+      <div class="small-line-title">
+        <div class="two-slide-title"></div>
+        <div class="circle-title"></div>
+        <div class="two-slide-title"></div>
+      </div>
+    </div>
+  </section>
+  <div class="new-arrival contentContainer">
+    <div class="filter-bars">
+      <ul>
+        <li id="allFilter">All</li>
+        <li id="productAcessories">Acessories</li>
+        <li id="productBag">Bag</li>
+        <li id="productSabat">Sabat</li>
+        <li id="productShoes">Shoes</li>
+        <li id="productTrapper">Trapper</li>
+      </ul>
+    </div>
+    <div id="product-list"></div>
+  </div>
+      <!-- carousel-item -->
+      <section class="item-carousel-box">
+        <div class="owl-carousel carousel-item owl-theme">
+            <a href="#" class="carousel-item-list">
+                <p>NEW BALANCE</p>
+                <img src="https://dunker.qodeinteractive.com/wp-content/uploads/2023/01/main-home-brand-5.jpg"
+                    alt="ảnh trang phục">
+            </a>
+            <a href="#" class="carousel-item-list">
+                <p>NIKE</p>
+                <img src="https://dunker.qodeinteractive.com/wp-content/uploads/2023/01/main-home-brand-2.jpg"
+                    alt="ảnh trang phục">
+            </a>
+            <a href="#" class="carousel-item-list">
+                <p>NORTH FACE</p>
+                <img src="https://dunker.qodeinteractive.com/wp-content/uploads/2023/01/main-home-brand-1.jpg"
+                    alt="ảnh trang phục">
+            </a>
+            <a href="#" class="carousel-item-list">
+                <p>PUMA</p>
+                <img src="https://dunker.qodeinteractive.com/wp-content/uploads/2023/01/main-home-brand-6.jpg"
+                    alt="ảnh trang phục">
+            </a>
+            <a href="#" class="carousel-item-list">
+                <p>KICKZ</p>
+                <img src="https://dunker.qodeinteractive.com/wp-content/uploads/2023/01/main-home-brand-7.jpg"
+                    alt="ảnh trang phục">
+            </a>
+
+        </div>
+    </section>
+        <!-- banner-video -->
+        <div class="banner-video">
+          <!-- nút play video -->
+          <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modelId">
+              <i class="fa fa-play"></i>
+          </button>
+          <!-- video -->
+          <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+              aria-hidden="true">
+              <div class="modal-dialog modal-xl" role="document">
+                  <div class="modal-content">
+                      <iframe title="vimeo-player" src="https://player.vimeo.com/video/529300981?h=1154554dda"
+                          width="100%" height="640" frameborder="0" allowfullscreen></iframe>
+                      <button
+                          style="font-size:30px;position: absolute;top:0px;right: -30px;background-color: transparent;border: none; color: white;"
+                          data-dismiss="modal"> x</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="styleIntro">
+          <div class="styleLeft style">
+              <img src="https://dunker.qodeinteractive.com/wp-content/uploads/2022/12/h1-img-3.jpg" alt="">
+              <div class="overlaystyleLeft">
+                  <p>New</p>
+              </div>
+          </div>
+          <div class="styleright style">
+              <img src="https://dunker.qodeinteractive.com/wp-content/uploads/2022/12/h1-img-4.jpg" alt="">
+              <div class="overlaystyleRight">
+                  <p>Sale</p>
+                  <span>20% Off all Hoodies</span>
+                  <button>SHOP NOW</button>
+              </div>
+          </div>
+      </div>
+     
+  <!-- core value -->
+  <div class="core_value">
+    <div class="core_value_inner">
+      <span class="material-symbols-outlined"> flight_takeoff </span>
+      <h5>SHIPPING WORLDWIDE</h5>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
+        adasdadsa
+      </p>
+    </div>
+    <div class="core_value_inner">
+      <span class="material-symbols-outlined"> reply </span>
+      <h5>FREE RETURN</h5>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo labore
+      </p>
+    </div>
+    <div class="core_value_inner">
+      <span class="material-symbols-outlined"> support </span>
+      <h5>ONLINE SUPPORT 24/7</h5>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore quo
+      </p>
+    </div>
+  </div>
+
+  <!-- our brand -->
+  <section class="arrival-box">
+    <div class="title-arrival-box contentContainer">
+      <h3 class="title-arrival">OUR BRAND</h3>
+      <div class="small-line-title">
+        <div class="two-slide-title"></div>
+        <div class="circle-title"></div>
+        <div class="two-slide-title"></div>
+      </div>
+    </div>
+  </section>
+  <div class="brandCaro contentContainer">
+    <div class="ourbrandSlide owl-carousel owl-theme">
+      <div class="brandCaro-item"><img src="https://okab.pixeldima.com/shop/wp-content/uploads/sites/5/2016/06/client1.png"
+          alt=""></div>
+      <div class="brandCaro-item"><img src="https://okab.pixeldima.com/shop/wp-content/uploads/sites/5/2016/06/client2.png"
+          alt=""></div>
+      <div class="brandCaro-item"><img src="https://okab.pixeldima.com/shop/wp-content/uploads/sites/5/2016/06/client3.png"
+          alt=""></div>
+      <div class="brandCaro-item"><img src="https://okab.pixeldima.com/shop/wp-content/uploads/sites/5/2016/06/client4.png"
+          alt=""></div>
+      <div class="brandCaro-item"><img src="https://okab.pixeldima.com/shop/wp-content/uploads/sites/5/2016/06/client5.png"
+          alt=""></div>
+      <div class="brandCaro-item"><img src="https://okab.pixeldima.com/shop/wp-content/uploads/sites/5/2016/06/client6.png"
+          alt=""></div>
+    </div>
+  </div>
+  <!-- footer -->
+  <footer class="footer">
+
+    <!-- top footer -->
+    <div class="top_footer">
+      <div class="footer-contentContainer">
+        <div class="footer-contentContainer_item">
+          <h5>About</h5>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint
+            fuga porro amet deserunt, facere modi doloremque libero voluptate
+            commodi temporibus iure qui accusamus blanditiis ipsam error
+            similique autem! Delectus, totam?
+          </p>
+        </div>
+        <div class="footer-contentContainer_item">
+          <h5>Product Categories</h5>
+          <!-- list of 6 categories -->
+          <ul>
+            <li><a href="./allpages_minhhoang/Acessories/acessories.html">Accessories</a></li>
+            <li><a href="">Bags</a></li>
+            <li><a href="">Sabat</a></li>
+            <li><a href="">Shoes</a></li>
+            <li><a href="">Trapper</a></li>
+            <li><a href="">Uncategorized</a></li>
+          </ul>
+        </div>
+        <div class="footer-contentContainer_item">
+          <h5>Top Rated Product</h5>
+          <div class="topratedProducts">
+
+          </div>
+        </div>
+      </div>
+      <!-- ======================================================= -->
+
+    </div>
+    </div>
+  </footer>
+  <!-- bottom footer -->
+  <div class="bottom_footer">
+    <!-- copyright 2021 PixelDima, powered by Wordpress -->
+    <div class="bottom_footer_left">
+      <p>
+        Copyright © 2021 <span>PixelDima</span>, powered by Wordpress.
+      </p>
+    </div>
+    <!-- bottom_navbar -->
+    <div class="bottom_navbar_right">
+      <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="./allpages_minhhoang/All products/allProducts.html">ALL PRODUCT</a></li>
+        <li><a href="./allpages_minhhoang/Acessories/acessories.html">ACCESSORIES</a></li>
+        <li><a href="./allpages_minhhoang/Shoes/shoes.html">SHOES</a></li>
+      </ul>
+    </div>
+</body>
+
+<!-- jsscript -->
+<script src="./data.js"></script>
+<script src="./app.js"></script>
+<!-- <script src="Okab.js"></script> -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="./vender/owl.carousel.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+  integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+  integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+<script>
+  $(document).ready(function () {
+    $(".owl-carousel").owlCarousel();
+  });
+  $('.ourbrandSlide').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:false,
+    autoplay: true,
+    autoplayTimeout: 2000,
+    autoplayHoverPause: true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
+})
+  $('.slider-animation').owlCarousel({
+    loop: true,
+    dots: false,
+    margin: 10,
+    nav: true,
+    // lazyLoad: true,
+    autoplay: true,
+    autoplayTimeout: 2000,
+    autoplayHoverPause: true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      600: {
+        items: 1
+      },
+      1000: {
+        items: 1
+      }
+    }
+  });
+  $('.carousel-item').owlCarousel({
+    loop: true,
+    // margin: 10,
+    // autoplay: true,
+    // autoplayTimeout: 3000,
+
+    autoplayHoverPause: true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      768: {
+        items: 3,
+        stagePadding: 75
+      },
+      1025: {
+        items: 6
+      }
+    }
+  });
+  $('.item-carousel-arrvial-1').owlCarousel({
+    loop: false,
+    margin: 10,
+    // autoWidth: true,
+    // nav: true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      768: {
+        items: 2
+      },
+      1024: {
+        items: 4
+      }
+    }
+  })
+</script>
+
+
+</html>

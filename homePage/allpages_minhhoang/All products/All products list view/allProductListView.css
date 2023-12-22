@@ -1,0 +1,143 @@
+.allProduct-container-list {
+    border: 1px solid #e1e1e1;
+    padding: 30px;
+    position:relative;
+    margin-bottom: 30px;
+
+}
+
+.allProduct-img-list {
+    width: 250px;
+    position:relative;
+}
+
+.allProduct-img-list .allProduct-img-idle {
+    width: 250px;
+    overflow:hidden;
+    float:left;
+    margin-right: 30px;
+}
+
+
+.header {
+    display:block;
+    width: 100%;
+    position:relative;
+    font-size: 28px;
+    line-height: 28px;
+    margin-bottom: 20px;
+    letter-spacing: 0;
+    font-weight: 500;
+    color:black;
+}
+
+.header:hover {
+    color:red;
+}
+
+.allProduct-moredetail-content .star-rating {
+    display:flex;
+    margin-right: 10px;
+    height: 23px;
+    position:relative;
+    width:115px;
+    top: 10px;
+    left: -8px;
+}
+
+.allProduct-moredetail-content .price {
+    text-align:left;
+    font-size: 25px;
+    line-height: 30px;
+    margin-bottom: 20px;
+    height: 40px;
+    display:block;
+    padding: 20px 0px 18px;
+    color: #434343;
+}
+
+.allProduct-moredetail-content .allProduct-description {
+    margin-bottom: 25px;
+    font-size:15px;
+}
+
+.allProduct-moredetail-content ul {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    left: -57px;
+    position:relative;
+    list-style: none;
+}
+
+.allProduct-moredetail-content ul li {
+    cursor:pointer;
+    border: 1px solid #e1e1e1;
+    text-align: center;
+    transition: all 0.2s ease-in;
+    display:inline-block;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    width: 50px;
+    height: 50px;
+}
+
+.allProduct-moredetail-content ul li:hover {
+  background-color: #f1404b;
+ color:white;
+}
+
+.allProduct-moredetail-content ul li .btn-style{
+   font-size:22px;
+   line-height: 50px;
+   display:inline-block;
+   font-weight: 400;
+   color:#f1404b;
+   max-width: 100%;
+   border:none;
+   background-color: transparent;
+   cursor:pointer;
+   width:50px;
+   height:50px;
+}
+
+.allProduct-moredetail-content ul li .btn-style:hover{
+  color:white;
+  
+ }
+
+.allProduct-img-list .onsale {
+    position: absolute;
+    z-index: 3;
+    top: 3px;
+    right: 4px;
+}
+.allProduct-img-list .onsale span {
+    z-index: 10;
+    color: #fff;
+    position: absolute;
+    transform:rotate(45deg);
+    font-size: 14px;
+    line-height: 14px;
+    right: 2px;
+    top: 12px;
+}
+
+.allProduct-img-list .onsale:after {
+    content: "";
+    position: absolute;
+    border-top: 60px solid #e81a27;
+    border-right: 0;
+    border-left: 60px solid transparent;
+    right: 0;
+    z-index: 2;
+}
+
+
+.customer-review-count {
+    position:absolute;
+    left:50%;
+    top:20%;
+    font-size:14px;
+    line-height:1px;
+}

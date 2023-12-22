@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+  }
+  form {
+    padding-top: 30px;
+    /* max-width: 1200px; */
+    margin: 0px;
+    border: 1px solid black;
+    padding: 50px!important;
+    margin: 50px!important;
+  }
+  .title_content {
+    display: flex;
+    justify-content: space-around;
+  }
+  .title_left {
+    width: 20%;
+  }
+  .title_left img {
+    width: 100%;
+  }
+  .title_center {
+    text-align: center;
+  }
+  .title_center h1 {
+    margin-bottom: 30px;
+  }
+  .title_right p {
+    margin: 10px 0;
+  }
+  .info_company_content p {
+    margin: 10px 0 5px 10px;
+    font-size: 17px;
+  }
+  .info_customer_content p {
+    margin: 10px 0 5px 10px;
+    font-size: 17px;
+  }
+  .info_product_content table {
+    width: 100%;
+    text-align: center;
+  }
+  .info_product_content p {
+    font-size: 17px;
+    margin: 20px 0;
+  }
+  .sign_content {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+  }
+  .sign_content h2 {
+    margin: 10px 0;
+  }
+  
+  tr>.table-center{
+    text-align: center;
+  }
+  .btn-1{
+    margin: 20px 0;
+  }
+  .modal, .text-left{
+    text-align: left;
+  }
+  .table-invoice {
+    font-weight: normal;
+  }
+  .table-invoice tr:first-child {
+    font-weight: bold;
+  }
+  .sign {
+    padding-top: 30px;
+    padding-bottom: 150px;
+  }
+  .info_product_content tr td{
+    padding: 5px 15px;
+  }
+  .signatrue{
+    background-color: #E4F2E5;
+    color:red;
+    padding: 10px 80px 10px 30px;
+    border: 2px solid #9ce9a3;
+    margin-top: 50px;
+  }
+  i{
+    font-weight: normal;
+    font-size: 14px;
+  }
+  .signatrue p{
+    margin: 0;
+    padding: 3px 0;
+    text-align: left;
+  }

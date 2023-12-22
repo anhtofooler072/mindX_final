@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop - OKAB</title>
+  <link rel="stylesheet" href="../../Okab.css">
+  <link rel="stylesheet" href="./footer.css">
+  <link rel="stylesheet" href="../All products/allProductheading.css" />
+  <link rel="stylesheet" href="../All products/allProductRight.css">
+  <link rel="stylesheet" href="../All products/allProductshowcase.css">
+  <link rel="stylesheet" href="../All products/loadingScreen/loadingScreen.css">
+  <link rel="stylesheet" href="./detailProduct.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+  <div id="preloader"></div>
+  <!-- <div id="preloader"></div> -->
+  <!-- header nhỏ ( thêm )-->
+  <div class="short-menu-header-box">
+    <div class="short-menu-header">
+      <div onclick="addOpen()" class="left-short-header">
+        <i class="fa fa-bars"></i>
+        <ul id="type-menu-small" class="type-menu-small">
+          <li><a href="../All products/allProducts.html">ALL PRODUCTS</a></li>
+          <li><a href="../../index.html">HOME</a></li>
+          <li><a href="../Acessories/acessories.html">ACCESORIES</a></li>
+          <li><a href="../Shoes/shoes.html">SHOES</a></li>
+          <li><a href="#">BUY NOW</a></li>
+        </ul>
+      </div>
+      <div class="center-short-header">
+        <img src="https://okab.pixeldima.com/shop/wp-content/uploads/sites/5/2016/06/shop-logo.png" alt="logo">
+      </div>
+      <div class="right-short-header">
+        <a href="#"><i class="fa fa-search"></i></a>
+        <a class="icon-shopping-header" href="../../Cart/cart.html"><i class="fa fa-shopping-bag"></i>
+          <span id="sm-amount" class="number-buy">0</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <header id="header" class="dima-header">
+    <div class="top-bar-header">
+      <div class="contentContainer">
+        <div class="left-header inl-block">
+          <div class="calendar">
+            <i class="fa fa-calendar-alt"></i>
+            <span id="day" class="day"></span>
+            <span id="month" class="month"></span>
+            <span id="day2" class="day2"></span>
+            <span id="year" class="year"></span>
+          </div>
+          <div class="phone inl-block">
+            <i class="fa fa-phone"></i>
+            <span class="number-phone">+213 55 66 55</span>
+          </div>
+        </div>
+        <div class="right-header inl-block">
+          <div class="account-box inl-block">
+            <i class="fa fa-user"></i>
+            <span id="header-account" class="account"><a href="#">My Account</a></span>
+          </div>
+          <div class="right-icon-box inl-block">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="dima-header-menu">
+      <div class="contentContainer">
+        <div class="left-menu-header inl-block">
+          <img src="https://okab.pixeldima.com/shop/wp-content/uploads/sites/5/2016/06/shop-logo.png" alt="logo">
+        </div>
+        <div class="right-menu-header inl-block">
+          <ul class="type-menu">
+            <li><a href="../../index.html">HOME</a></li>
+            <li><a href="../All products/allProducts.html">ALL PRODUCTS</a></li>
+            <li><a href="../Acessories/acessories.html">ACCESORIES</a></li>
+            <li><a href="../Shoes/shoes.html">SHOES</a></li>
+            <li><a href="#">BUY NOW</a></li>
+            <li><a href="#"><i class="fa fa-search"></i></a></li>
+            <ul class="buy-header"><a href="../../Cart/cart.html"><i class="fa fa-shopping-bag"></i>
+                <span id="amount" class="number-buy">0</span>
+                <span id="totalPrices" class="price-buy">$0.00</span>
+              </a>
+              <ul class="buy-header-box">
+                <div class="buy-container-header-box">
+                  <!-- thêm phần box giỏ đồ trên header -->
+                  <li class="item-buy-amount-box item-added-box">
+                    <div class="item-added-box" id="QAcart_Box">
+                      <!-- <img class="item-buy-pic" src="https://okab.pixeldima.com/shop/wp-content/uploads/sites/5/2016/04/product2-582x652.jpg" alt="img-ảnh đồ mua"> -->
+                      <!-- <div class="item-detail-price inl-block"> -->
+                      <!-- <p class="item-name-buy inl-block">Boot</p> -->
+                      <!-- <p class="item-amount-price">5 x $290.00</p> -->
+                      <!-- </div> -->
+                    </div>
+                  </li>
+                  <li class="total-money-item">
+                    <p class="total-text inl-block">Subtotal :</p>
+                    <p class="total-money inl-block" id="Subtotal_QA">$0.00</p>
+                  </li>
+                  <li class="button-wallet-box">
+                    <a href="../../Cart/cart.html" class="view-cart"><button class="view-cart">View Cart</button></a>
+                    <a href="../../checkout/checkout.html" class="check-out">
+                      <button>CheckOut</button>
+                    </a>
+                  </li>
+                </div>
+              </ul>
+            </ul>
+          </ul>
+          <!-- <ul>
+                              <li></li>
+                          </ul> -->
+          </a></ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- page title -->
+  <div class="page-title">
+
+  </div>
+  <!-- content -->
+  <div class="page-section-container">
+    <div class="allProduct-section-container">
+      <div class="allProduct-left">
+        <!-- all product left header  -->
+        <!-- all product left content -->
+        <div id="detailProduct-showcase">
+        </div>
+        <div class="detailProduct-footer">
+        </div>
+        <div class="related-product">
+          <h4>Related Product</h4>
+          <div class="related-content">
+
+          </div>
+        </div>
+      </div>
+      <!-- all product right-->
+      <div class="allProduct-right">
+        <div class="allProduct-right-search-section">
+          <h5 class="search-bar-title">SEARCH PRODUCT</h5>
+          <form action="" class="search-bar">
+            <span class="search-bar-icon"><i class="fa fa-search" aria-hidden="true"></i></span>
+            <label class="screen-reader-text" for="search-bar-field">Search for:</label>
+            <input type="search" id="search-bar-field" placeholder="Search products...">
+
+
+          </form>
+        </div>
+        <div class="products-sidebar">
+          <h5 class="products-sidebar-title">Products</h5>
+          <ul class="products-sidebar-showcase">
+
+          </ul>
+        </div>
+        <div class="product-tags">
+          <h5 class="product-tags-title">PRODUCT TAGS</h5>
+          <div class="tag-btn">
+            <a href="../All products/Product tags/Black/black.html"><button href="#"
+                class="tag-btn-content black-tags">black</button></a>
+            <a href="../All products/Product tags/Boots/boots.html"><button
+                class="tag-btn-content boots-tags">boots</button></a>
+            <a href="../All products/Product tags/Cotton/cotton.html"><button
+                class="tag-btn-content cotton-tags">Cotton</button></a>
+            <a href="../All products/Product tags/Glasses/glasses.html"><button
+                class="tag-btn-content glasses-tags">glasses</button></a>
+            <a href="../All products/Product tags/Red/red.html"><button
+                class="tag-btn-content red-tags">Red</button></a>
+            <a href="../All products/Product tags/Shoes/shoes.html"><button
+                class="tag-btn-content shoes-tags">shoes</button></a>
+            <a href="../All products/Product tags/Yepme/yepme.html"><button
+                class="tag-btn-content yepme-tags">Yepme</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <footer class="footer">
+
+    <!-- top footer -->
+    <div class="top_footer">
+      <div class="footer-contentContainer">
+        <div class="footer-contentContainer_item">
+          <h5>About</h5>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint
+            fuga porro amet deserunt, facere modi doloremque libero voluptate
+            commodi temporibus iure qui accusamus blanditiis ipsam error
+            similique autem! Delectus, totam?
+          </p>
+        </div>
+        <div class="footer-contentContainer_item">
+          <h5>Product Categories</h5>
+          <!-- list of 6 categories -->
+          <ul>
+            <li><a href="./allpages_minhhoang/Acessories/acessories.html">Accessories</a></li>
+            <li><a href="">Bags</a></li>
+            <li><a href="">Sabat</a></li>
+            <li><a href="">Shoes</a></li>
+            <li><a href="">Trapper</a></li>
+            <li><a href="">Uncategorized</a></li>
+          </ul>
+        </div>
+        <div class="footer-contentContainer_item">
+          <h5>Top Rated Product</h5>
+          <div class="topratedProducts">
+
+          </div>
+        </div>
+      </div>
+      <!-- ======================================================= -->
+
+    </div>
+    </div>
+  </footer>
+  <!-- bottom footer -->
+  <div class="bottom_footer">
+    <!-- copyright 2021 PixelDima, powered by Wordpress -->
+    <div class="bottom_footer_left">
+      <p>
+        Copyright © 2021 <span>PixelDima</span>, powered by Wordpress.
+      </p>
+    </div>
+    <!-- bottom_navbar -->
+    <div class="bottom_navbar_right">
+      <ul>
+        <li><a href="../../index.html">HOME</a></li>
+        <li><a href="#">ALL PRODUCT</a></li>
+        <li><a href="../Acessories/acessories.html">ACCESSORIES</a></li>
+        <li><a href="../Shoes/shoes.html">SHOES</a></li>
+      </ul>
+    </div>
+    <!-- <script src="./addtocart.js"></script> -->
+    <script src="../All products/allProducts.js"></script>
+    <script src="../All products/loadingScreen/loadingScreen.js"></script>
+    <script src="./detailProduct.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/nouislider/distribute/nouislider.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"></script>
+    <script src="./detailProductfunc.js"></script>
+</body>
+
+</html>

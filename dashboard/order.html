@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<!--
+* CoreUI - Free Bootstrap Admin Template
+* @version v4.2.2
+* @link https://coreui.io/product/free-bootstrap-admin-template/
+* Copyright (c) 2023 creativeLabs Łukasz Holeczek
+* Licensed under MIT (https://github.com/coreui/coreui-free-bootstrap-admin-template/blob/main/LICENSE)
+--><!-- Breadcrumb-->
+<html lang="en">
+  <head>
+    <base href="./" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="CoreUI - Open Source Bootstrap Admin Template"
+    />
+    <meta name="author" content="Łukasz Holeczek" />
+    <meta
+      name="keyword"
+      content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard"
+    />
+    <title>Okav - Đơn hàng</title>
+    <link rel="manifest" href="assets/favicon/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-TileImage"
+      content="assets/favicon/ms-icon-144x144.png"
+    />
+    <!-- Vendors styles-->
+    <link rel="stylesheet" href="vendors/simplebar/css/simplebar.css" />
+    <link rel="stylesheet" href="css/vendors/simplebar.css" />
+    <!-- Main styles for this application-->
+    <link href="css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./jsPro/lst.-pro.css">
+    <link rel="stylesheet" href="./jsPro/bill.css">
+    <!-- We use those styles to show code examples, you should remove them in your application.-->
+    <link href="css/examples.css" rel="stylesheet" />
+    <!-- fonttext -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./order.css">
+  </head>
+
+  <body>
+    <div class="sidebar sidebar-dark sidebar-fixed" id="sidebar">
+      <div class="sidebar-brand d-none d-md-flex">
+        <img
+          class="sidebar-brand-full"
+          style="width: 140px"
+          src="https://okab.pixeldima.com/shop/wp-content/uploads/sites/5/2016/06/shop-logo.png"
+          alt=""
+        />
+        <img
+          class="sidebar-brand-narrow"
+          width="46"
+          height="46"
+          alt="CoreUI Logo"
+          src="https://okab.pixeldima.com/shop/wp-content/uploads/sites/5/2016/06/shop-logo.png"
+        />
+      </div>
+      <ul class="sidebar-nav" data-coreui="navigation" data-simplebar="">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">
+            <svg class="nav-icon">
+              <use
+                xlink:href="vendors/@coreui/icons/svg/free.svg#cil-speedometer"
+              ></use>
+            </svg>
+            Trang chủ
+          </a>
+        </li>
+        <li class="nav-title">DANH MỤC</li>
+        <li class="nav-item">
+          <a class="nav-link" href="./product.html">
+            <svg class="nav-icon">
+              <use
+                xlink:href="vendors/@coreui/icons/svg/free.svg#cil-drop"
+              ></use>
+            </svg>
+            Danh sách sản phẩm</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./order.html">
+            <svg class="nav-icon">
+              <use
+                xlink:href="vendors/@coreui/icons/svg/free.svg#cil-pencil"
+              ></use>
+            </svg>
+            Danh sách đơn hàng</a
+          >
+        </li>
+        <li class="nav-title">Thông tin khách hàng</li>
+      </ul>
+      <button
+        class="sidebar-toggler"
+        type="button"
+        data-coreui-toggle="unfoldable"
+      ></button>
+    </div>
+    <div class="wrapper d-flex flex-column min-vh-100 bg-light">
+      <header class="header header-sticky mb-4">
+        <div class="container-fluid">
+          <button
+            class="header-toggler px-md-0 me-md-3"
+            type="button"
+            onclick="coreui.Sidebar.getInstance(document.querySelector('#sidebar')).toggle()"
+          >
+            <svg class="icon icon-lg">
+              <use
+                xlink:href="vendors/@coreui/icons/svg/free.svg#cil-menu"
+              ></use>
+            </svg></button
+          ><a class="header-brand d-md-none" href="#">
+            <svg width="118" height="46" alt="CoreUI Logo">
+              <use xlink:href="assets/brand/coreui.svg#full"></use></svg
+          ></a>
+          <ul class="header-nav d-none d-md-flex">
+            <li class="nav-item"><a class="nav-link" href="#">Dashboard</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Users</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Settings</a></li>
+          </ul>
+          <ul class="header-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <svg class="icon icon-lg">
+                  <use
+                    xlink:href="vendors/@coreui/icons/svg/free.svg#cil-bell"
+                  ></use></svg
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <svg class="icon icon-lg">
+                  <use
+                    xlink:href="vendors/@coreui/icons/svg/free.svg#cil-list-rich"
+                  ></use></svg
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <svg class="icon icon-lg">
+                  <use
+                    xlink:href="vendors/@coreui/icons/svg/free.svg#cil-envelope-open"
+                  ></use></svg
+              ></a>
+            </li>
+          </ul>
+          <ul class="header-nav ms-3">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link py-0"
+                data-coreui-toggle="dropdown"
+                href="#"
+                role="button"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <div class="avatar avatar-md">
+                  <img
+                    class="avatar-img"
+                    src="assets/img/avatars/8.jpg"
+                    alt="user@email.com"
+                  />
+                </div>
+              </a>
+              <div class="dropdown-menu dropdown-menu-end pt-0">
+                <div class="dropdown-header bg-light py-2">
+                  <div class="fw-semibold">Account</div>
+                </div>
+                <a class="dropdown-item" href="#">
+                  <svg class="icon me-2">
+                    <use
+                      xlink:href="vendors/@coreui/icons/svg/free.svg#cil-bell"
+                    ></use>
+                  </svg>
+                  Updates<span class="badge badge-sm bg-info ms-2">42</span></a
+                ><a class="dropdown-item" href="#">
+                  <svg class="icon me-2">
+                    <use
+                      xlink:href="vendors/@coreui/icons/svg/free.svg#cil-envelope-open"
+                    ></use>
+                  </svg>
+                  Messages<span class="badge badge-sm bg-success ms-2"
+                    >42</span
+                  ></a
+                ><a class="dropdown-item" href="#">
+                  <svg class="icon me-2">
+                    <use
+                      xlink:href="vendors/@coreui/icons/svg/free.svg#cil-task"
+                    ></use>
+                  </svg>
+                  Tasks<span class="badge badge-sm bg-danger ms-2">42</span></a
+                ><a class="dropdown-item" href="#">
+                  <svg class="icon me-2">
+                    <use
+                      xlink:href="vendors/@coreui/icons/svg/free.svg#cil-comment-square"
+                    ></use>
+                  </svg>
+                  Comments<span class="badge badge-sm bg-warning ms-2"
+                    >42</span
+                  ></a
+                >
+                <div class="dropdown-header bg-light py-2">
+                  <div class="fw-semibold">Settings</div>
+                </div>
+                <a class="dropdown-item" href="#">
+                  <svg class="icon me-2">
+                    <use
+                      xlink:href="vendors/@coreui/icons/svg/free.svg#cil-user"
+                    ></use>
+                  </svg>
+                  Profile</a
+                ><a class="dropdown-item" href="#">
+                  <svg class="icon me-2">
+                    <use
+                      xlink:href="vendors/@coreui/icons/svg/free.svg#cil-settings"
+                    ></use>
+                  </svg>
+                  Settings</a
+                ><a class="dropdown-item" href="#">
+                  <svg class="icon me-2">
+                    <use
+                      xlink:href="vendors/@coreui/icons/svg/free.svg#cil-credit-card"
+                    ></use>
+                  </svg>
+                  Payments<span class="badge badge-sm bg-secondary ms-2"
+                    >42</span
+                  ></a
+                ><a class="dropdown-item" href="#">
+                  <svg class="icon me-2">
+                    <use
+                      xlink:href="vendors/@coreui/icons/svg/free.svg#cil-file"
+                    ></use>
+                  </svg>
+                  Projects<span class="badge badge-sm bg-primary ms-2"
+                    >42</span
+                  ></a
+                >
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">
+                  <svg class="icon me-2">
+                    <use
+                      xlink:href="vendors/@coreui/icons/svg/free.svg#cil-lock-locked"
+                    ></use>
+                  </svg>
+                  Lock Account</a
+                ><a class="dropdown-item" href="#">
+                  <svg class="icon me-2">
+                    <use
+                      xlink:href="vendors/@coreui/icons/svg/free.svg#cil-account-logout"
+                    ></use>
+                  </svg>
+                  Logout</a
+                >
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="header-divider"></div>
+        <div class="container-fluid">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb my-0 ms-2">
+              <li class="breadcrumb-item">
+                <!-- if breadcrumb is single--><a href="#">Trang chủ </a>
+              </li>
+              <li class="breadcrumb-item">
+                <!-- if breadcrumb is single--><a href="#">Danh mục</a>
+              </li>
+              <li class="breadcrumb-item active">
+                <span>Danh sách đơn hàng</span>
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </header>
+
+      <div class="body flex-grow-1 px-3">
+        <div class="body-content">
+          <div class="card mb-4">
+            <span>Tìm kiếm đơn hàng</span>
+            <input oninput="find()" type="text" name="" id="find">
+            <div class="card-header">Danh sách đơn hàng</div>
+            <div class="card-body order-content">
+              <table>
+                <thead class="card-head">
+                  <tr>
+                    <th>STT</th>
+                    <th>Tên khách hàng</th>
+                    <th>SĐT</th>
+                    <th>Địa chỉ</th>
+                    <th>Email</th>
+                    <th>Giá trị đơn hàng</th>
+                    <th>Chi tiết</th>
+                  </tr>
+                </thead>
+                <tbody class="card-content">
+                
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- CoreUI and necessary plugins-->
+    <script src="vendors/@coreui/coreui/js/coreui.bundle.min.js"></script>
+    <script src="vendors/simplebar/js/simplebar.min.js"></script>
+    <!-- Plugins and scripts required by this view-->
+    <script src="vendors/@coreui/utils/js/coreui-utils.js"></script>
+    <script src="js/colors.js"></script>
+    <script src="./order.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
