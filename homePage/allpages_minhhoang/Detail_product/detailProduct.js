@@ -469,9 +469,11 @@ function addtoCart(id) {
             pItem: item,
         });
         countt += Number(quantity);
+        localStorage.setItem("number-of-product", JSON.stringify(countt));
     }else{
         cartProduct[indexItem].sl=Number(cartProduct[indexItem].sl)+Number(quantity);
         countt += Number(quantity);
+        localStorage.setItem("number-of-product", JSON.stringify(countt));
     }
     
     for (i = 0; i < cartProduct.length; i++) {
@@ -525,3 +527,42 @@ function cart_Boxdisplay() {
     cartBOX_dom.innerHTML = cartProduct_dom_content;
   }
   cart_Boxdisplay();
+// =====================================cart box=======================
+// =====================================footer=======================
+// for top rated products in footer
+let TopratedProducts_img;
+TopratedProducts_img = document.querySelector(".topratedProducts");
+// console.log(topratedProducts_img);
+// for footer
+// find top rated products
+let Toprated = JSON.parse(localStorage.getItem("products"));
+let TopratedProducts_img_content = "";
+let maxRev = Number(Toprated[0].review);
+for (let i = 0; i < Toprated.length; i++) {
+  if (maxRev < Number(Toprated[i].review)) {
+    maxRev = Number(Toprated[i].review);
+  }
+}
+// console.log(maxRev);
+
+// generate top rated products
+for (let j = 0; j < Toprated.length; j++) {
+  const starRatingHTML = getStarRating(Number(Toprated[j].review), 0);
+  if (Number(Toprated[j].review) === maxRev) {
+    // console.log(Toprated[j]);
+    TopratedProducts_img_content += `
+    <div class="topratedProducts_item">
+                <img src="${Toprated[j].img[1]}" alt="pict">
+                <div class="topratedProducts_item_detail">
+                  <p class="topratedProducts_item_detail_name">${Toprated[j].productName}</p>
+                  <div class="star-rating topratedProducts_item_detail_rated" title="rated 3 out of 5" data-rating="3">
+                  ${starRatingHTML}
+                  </div>
+                  <p class="topratedProducts_item_detail_price">${Toprated[j].price}</p>
+              </div>
+              </div>
+    `;
+    TopratedProducts_img.innerHTML = TopratedProducts_img_content;
+  }
+}
+// =====================================footer=======================

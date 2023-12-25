@@ -6,6 +6,29 @@
  * Licensed under MIT (https://coreui.io/license)
  * --------------------------------------------------------------------------
  */
+let orderList1= JSON.parse(localStorage.getItem('orderList'))
+let monthlyTotal = {};
+
+orderList1.forEach(order => {
+  let month = parseInt(order.date.split('/')[1]);
+
+  if (!monthlyTotal[month]) {
+    monthlyTotal[month] = 0;
+  }
+
+  order.orderItem.forEach(item => {
+    monthlyTotal[month] += item.pItem.price * item.sl;
+  });
+});
+
+// Sắp xếp lại theo thứ tự tháng
+monthlyTotal = Object.fromEntries(Array.from({ length: 12 }, (_, i) => [i + 1, monthlyTotal[i + 1] || 0]));
+
+console.log(monthlyTotal[1]);
+
+
+
+
 
 // Disable the on-canvas tooltip
 Chart.defaults.pointHitDetectionRadius = 1;
@@ -219,21 +242,20 @@ const cardChart4 = new Chart(document.getElementById('card-chart4'), {
 const mainChart = new Chart(document.getElementById('main-chart'), {
   type: 'line',
   data: {
-    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July',"August	","September",	"October","November",	"December",],
     datasets: [{
       label: 'My First dataset',
       backgroundColor: coreui.Utils.hexToRgba(coreui.Utils.getStyle('--cui-info'), 10),
       borderColor: coreui.Utils.getStyle('--cui-info'),
       pointHoverBackgroundColor: '#fff',
       borderWidth: 2,
-      data: [random(50, 200), random(50, 200), random(50, 200), random(50, 200), random(50, 200), random(50, 200), random(50, 200)],
+      data: [monthlyTotal[1],monthlyTotal[2],monthlyTotal[3],monthlyTotal[4],monthlyTotal[5],monthlyTotal[6],monthlyTotal[7],monthlyTotal[8],monthlyTotal[9],monthlyTotal[10],monthlyTotal[11],monthlyTotal[12],],
       fill: true
     }, {
       label: 'My Second dataset',
       borderColor: coreui.Utils.getStyle('--cui-success'),
       pointHoverBackgroundColor: '#fff',
       borderWidth: 2,
-      data: [random(150, 200), random(50, 200), random(50, 200), random(50, 200), random(50, 200), random(50, 200), random(50, 200)]
     }, {
       label: 'My Third dataset',
       borderColor: coreui.Utils.getStyle('--cui-danger'),

@@ -25,7 +25,6 @@ function renderBest() {
           <td>${bestSeller[j].review}/5</td>
         </tr>
         `;
-      console.log(bsContent);
     }
     document.querySelector(".best-seller-list").innerHTML = bsContent;
   }

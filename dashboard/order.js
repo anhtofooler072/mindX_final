@@ -4,7 +4,7 @@ function renOrder(orderList) {
   let ordContent = ``;
   let billPro
   for (i = 0; i < orderList.length; i++) {
-    billPro=""
+    billPro = ""
     let total = 0;
     let price;
     for (j = 0; j < orderList[i].orderItem.length; j++) {
@@ -21,17 +21,17 @@ function renOrder(orderList) {
       console.log(orderList[i].orderItem[j]);
       billPro += `
         <tr>
-          <td>${j+1}</td>
+          <td>${j + 1}</td>
           <td>${orderList[i].orderItem[j].pItem.productId}</td>
           <td>${orderList[i].orderItem[j].pItem.productName}</td>
           <td>Cái</td>
           <td>${orderList[i].orderItem[j].sl}</td>
           <td>$${price}</td>
-          <td>$${price*orderList[i].orderItem[j].sl}</td>
+          <td>$${(price * orderList[i].orderItem[j].sl).toFixed(2)}</td>
         </tr>
         `;
     }
-    
+
 
     ordContent += `
       <tr>
@@ -40,16 +40,13 @@ function renOrder(orderList) {
         <td>${orderList[i].phone}</td>
         <td>${orderList[i].add1}</td>
         <td>${orderList[i].email}</td>
-        <td>$${total}</td>
+        <td>$${total.toFixed(2)}</td>
         <td><!-- Button trigger modal -->
-                    <button type="button"  class="btn-1" data-toggle="modal" data-target="#modelId${
-                      orderList[i].id
-                    }">
-                      Chi tiết
-                    </button>
-                    <div class="modal fade" id="modelId${orderList[i].id}" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+              <button type="button"  class="btn-1" data-toggle="modal" data-target="#modelId${orderList[i].id}">Chi tiết</button>
+              <button type="button" class="btn-1" onclick="print('${orderList[i].id}')" >Print</button>
+              <div class="modal fade" id="modelId${orderList[i].id}" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
               <div class="modal-dialog modal-xl" role="document">
-                <div class="modal-content">
+                <div class="modal-content  md${orderList[i].id}">
                 <form action="">
                 <section class="title">
                   <div class="title_content">
@@ -61,6 +58,8 @@ function renOrder(orderList) {
                     </div>
                     <div class="title_center">
                       <h1><b>HÓA ĐƠN BÁN HÀNG</b></h1>
+                      <p><b>Ngày ${orderList[i].date.slice(0, 2)} Tháng ${orderList[i].date.slice(3, 5)} Năm ${orderList[i].date.slice(6, 10)}</b></p>
+
                     </div>
                     <div class="title_right">
                       <p><b>Mẫu số:</b> 01</p>
@@ -87,9 +86,8 @@ function renOrder(orderList) {
                 <hr/>
                 <section class="info_customer">
                   <div class="info_customer_content">
-                    <p><b>Họ tên người mua hàng: </b>${
-                      orderList[i].firstName
-                  } ${orderList[i].lastName} </p>
+                    <p><b>Họ tên người mua hàng: </b>${orderList[i].firstName
+      } ${orderList[i].lastName} </p>
                     <p><b>Số điện thoại: </b>${orderList[i].phone}</p>
                     <p><b>Địa chỉ: </b> ${orderList[i].add1}</p>
                     <p><b>Chi tiết sản phẩm: </ b></p>
@@ -119,15 +117,15 @@ function renOrder(orderList) {
                       ${billPro}
                       <tr>
                       <td colspan="6"><b>Cộng thành tiền hàng:</b></td>
-                      <td><b>${total.toLocaleString()}đ</b></td>
+                      <td><b>$${(total).toFixed(2).toLocaleString()}</b></td>
                     </tr>
                       <tr>
                         <td colspan="6"><b>Thuế suất GTGT(10%)</b></td>
-                        <td><b>${parseInt((total*10/100)).toLocaleString()}đ</b></td>
+                        <td><b>$${(parseInt((total * 10 / 100)).toFixed(2)).toLocaleString()}</b></td>
                       </tr>
                       <tr>
                         <td colspan="6"><b>Tổng tiền thanh toán:</b></td>
-                        <td><b>${parseInt(total+(total*10/100)).toLocaleString()}đ</b></td>
+                        <td><b>$${(parseInt(total + (total * 10 / 100)).toFixed(2)).toLocaleString()}</b></td>
                       </tr>
                       <tr />
                   
@@ -149,7 +147,7 @@ function renOrder(orderList) {
                     <div class="signatrue">
                         <p>Signatrue Valid</p>
                         <p>Ký bởi : Okad Store </p>
-                        <p>Ký ngày :${new Date().toLocaleDateString('vi-VI') }</p>
+                        <p>Ký ngày :${new Date().toLocaleDateString('vi-VI')}</p>
                     </div>
                     </div>
                   </div>
@@ -163,7 +161,7 @@ function renOrder(orderList) {
 renOrder(orderList);
 
 
-function find(){
+function find() {
   let ip = document.querySelector("#find").value;
   let newarr = [];
   for (let i = 0; i < orderList.length; i++) {
@@ -173,4 +171,113 @@ function find(){
   }
   renOrder(newarr);
 
+}
+function print(id) {
+  console.log(`.md${id}`)
+  const divContent = document.querySelector(`.md${id}`).innerHTML;
+
+  const cssStyle = `<style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+form {
+  /* max-width: 1200px; */
+  margin: 0px;
+  border: 1px solid black;
+  padding: 30px!important;
+  margin: 30px!important;
+}
+.title_content {
+  display: flex;
+  justify-content: space-around;
+}
+.title_left {
+  width: 20%;
+}
+.title_left img {
+  width: 100%;
+}
+.title_center {
+  text-align: center;
+}
+.title_center h1 {
+  margin-bottom: 30px;
+}
+.title_right p {
+  margin: 10px 0;
+}
+.info_company_content p {
+  margin: 10px 0 5px 10px;
+  font-size: 17px;
+}
+.info_customer_content p {
+  margin: 10px 0 5px 10px;
+  font-size: 17px;
+}
+.info_product_content table {
+  width: 100%;
+  text-align: center;
+}
+.info_product_content p {
+  font-size: 17px;
+  margin: 20px 0;
+}
+.sign_content {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+.sign_content h2 {
+  margin: 10px 0;
+}
+
+tr>.table-center{
+  text-align: center;
+}
+.btn-1{
+  margin: 20px 0;
+}
+.modal, .text-left{
+  text-align: left;
+}
+.table-invoice {
+  font-weight: normal;
+}
+.table-invoice tr:first-child {
+  font-weight: bold;
+}
+.sign {
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+.info_product_content tr td{
+  padding: 3px 10px;
+}
+.signatrue{
+  background-color: #E4F2E5;
+  color:red;
+  padding: 10px 80px 10px 30px;
+  border: 2px solid #9ce9a3;
+  margin-top: 20px;
+}
+i{
+  font-weight: normal;
+  font-size: 14px;
+}
+.signatrue p{
+  margin: 0;
+  padding: 3px 0;
+  text-align: left;
+}
+  </style>`;
+  const newPage = `<html><head><title>Print</title>${cssStyle}</head><body>${divContent}</body></html>`;
+  // Mở trang HTML mới và in
+  const printWindow = window.open('', '_blank');
+  printWindow.document.open();
+  printWindow.document.write(newPage);
+  printWindow.document.close();
+  printWindow.print();
 }

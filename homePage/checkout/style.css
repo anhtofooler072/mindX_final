@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: "montserrat", sans-serif !important;
+  font-family: "montserrat", sans-serif;
   font-size: 16px;
   line-height: 1.5;
   color: #777;
@@ -697,21 +697,20 @@ a {
   justify-content: center;
   align-items: center;
   height: 23px;
-  /* width: 100%; */
+  width: 100%;
   flex-direction: row-reverse;
-  margin-bottom: 10px;
 
 } 
 
 .star-rating .starOpacity {
   display: flex;
   width: 20px;
-  /* height: 100%; */
+  height: 100%;
   margin-right: 10px;
   z-index: 1;
   opacity: .3;
   color: red;
-  /* top: -14px; */
+  top: -14px;
   right: -8px;
 }
 
@@ -944,7 +943,9 @@ a {
   justify-content: space-between;
   margin-bottom: 0;
 }
-
+.bag_hover:hover i{
+  color:black!important;
+}
 .bottom_footer .bottom_navbar_right ul li a {
   font-size: 14px;
   color: #c4c4c4;
@@ -970,13 +971,15 @@ a {
   color: #c4c4c4;
   margin-bottom: 0;
 }
+
+
 /* =============================================================== */
 /* global */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Hind', sans-serif;
 }
 /* CSS title */
 .cart-title,.checkout-title {
@@ -1209,6 +1212,39 @@ tr.product-quantity {
         margin: 0 30px;
         
     }
+    /* reponsive thêm */
+  .footer-contentContainer{
+    display: block;
+  }
+  .footer-contentContainer_item{
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .footer-contentContainer_item ul li a{
+    font-size: 16px;
+  }
+  .bottom_footer{
+    display: block;
+    padding: 20px 25px;
+  }
+  .bottom_footer .bottom_footer_left p{
+    width: 80%;
+    font-size: 14px;
+    margin-left: auto;
+  }
+  .bottom_navbar_right{
+    width: 100%;
+  }
+  .bottom_footer .bottom_navbar_right ul{
+    /* width: 65%; */
+    /* margin-left: auto; */
+    gap: 15px;
+  }
+  .bottom_footer .bottom_navbar_right ul li a{
+    font-size: 12px;
+    color: white;
+  }
+  /* reponsive thêm */
 }
 
 /* CSS CHECKOUT */
@@ -1218,6 +1254,13 @@ tr.product-quantity {
   margin: auto;
   display: flex;
   padding-top: 87.5px;
+  padding-bottom: 280px;
+}
+.checkout-content .billing-details div{
+  margin-bottom: 10px;
+}
+.checkout-content .billing-details label{
+  font-size: 16px;
 }
 .co-col {
   width: 33%;
@@ -1229,6 +1272,14 @@ tr.product-quantity {
   width: 100%;
   gap: 10px;
 }
+/* sửa css tí */
+.co-form select{
+  border: solid 1px #E1E1E1;
+  background-color: #FAFAFA;
+  width: 100%;
+  margin: 5px 0;
+}
+/* sửa css tí */
 .co-form input {
   padding: 15px;
   border: solid 1px #E1E1E1;
@@ -1241,12 +1292,15 @@ label {
   font-size: 14px;
   color: #434343;
 }
+/* thêm css tí */
 .billing-details h3 {
   font-family: "Montserrat",Helvetica,Arial,Times,serif;
   font-weight: normal;
   font-size: 24.5px;
   color: #434343;
+  margin-bottom: 10px;
 }
+/* thêm css tí */
 .billing-details textarea {
   width: 100%;
   padding: 15.5px;
@@ -1302,6 +1356,7 @@ select {
 .tb-subtotal {
   font-weight: bold;
 }
+/* thêm css */
 .your-order button {
   background-color: #f1404b;
   border: none;
@@ -1311,8 +1366,20 @@ select {
   width: 100%;
   padding: 12px;
   margin-top: 30px;
+  cursor: pointer;
 }
-
+.allProduct-right .search-bar{
+  margin: 10px 0;
+}
+.allProduct-right .search-bar input{
+  width: 100%;
+  padding: 5px;
+  margin-top: 7px;
+}
+.products-sidebar{
+  margin-top: 20px;
+}
+/* thêm css */
 .products-sidebar-showcase{
   display: flex;
   flex-direction: column;
@@ -1341,4 +1408,63 @@ select {
   align-items: flex-start;
   justify-content: center;
   margin-left: 10px;
+}
+.product-tags .tag-btn button{
+  background-color: rgba(223, 223, 223, 0.4);
+  border:1px solid rgba(223, 223, 223, 1);
+  font-size: 14px;
+  padding: 6px 12px;
+  margin-left: 8px;
+  margin-top: 8px;
+  cursor: pointer;
+}
+.product-tags .tag-btn button:hover{
+  background-color: red;
+  border:1px solid white;
+  color: white;
+}
+@media only screen and (max-width: 1024px) {
+  .co-col {
+    width: 100%;
+  }
+  .checkout-content{
+    width: 90%;
+    display: block;
+  }
+  .checkout-content .allProduct-right{
+    margin-top: 50px;
+  }
+  /* reponsive thêm */
+  .footer-contentContainer{
+    display: block;
+  }
+  .footer-contentContainer_item{
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .footer-contentContainer_item ul li a{
+    font-size: 16px;
+  }
+  .bottom_footer{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 60px;
+  }
+  .bottom_footer .bottom_footer_left p{
+    width: 100%;
+    font-size: 14px;
+    margin: auto;
+  }
+  .bottom_navbar_right{
+    width: 100%;
+  }
+  .bottom_footer .bottom_navbar_right ul{
+    width: 95%;
+    gap: 20px;
+  }
+  .bottom_footer .bottom_navbar_right ul li a{
+    font-size: 12px;
+    color: white;
+  }
+  /* reponsive thêm */
 }

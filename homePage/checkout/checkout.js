@@ -13,33 +13,31 @@ function renderSidebarProducts(products) {
 
     if (product.discount === "1") {
       displayedPrice = `
-            <del>$${product.price}</del>
-            <span>$${product.discountPrice}</span>
-          `;
+        <del>$${product.price}</del>
+        <span>$${product.discountPrice}</span>
+      `;
     } else {
-      displayedPrice = `$${product.price}`;
+      displayedPrice = `$${product.price}`
     }
 
     const starRatingSidebarHTML = getStarRatingSidebar(numberOfReviewsSideBars);
 
     const sideBarproductHTML = `
-    <a href="">
     <li>
     <a href="#">
-    <div class="sidebar-product-img">
-      <img src="${product.img[0]}"> 
+      <div class="sidebar-product-img">
+        <img src="${product.img[0]}"> 
+      </div>
+      <div class="products-sidebar-showcase-info">
+      <span class="sidebar-product-title">${product.productName}</span> 
+    </a>
+    <div class="star-rating" title="rated ${numberOfReviewsSideBars} out of 5" data-rating="${numberOfReviewsSideBars}">
+      ${starRatingSidebarHTML}
     </div>
-    <div class="products-sidebar-showcase-info">
-    <span class="sidebar-product-title">${product.productName}</span> 
-  </a>
-  <div class="star-rating" title="rated ${numberOfReviewsSideBars} out of 5" data-rating="${numberOfReviewsSideBars}">
-    ${starRatingSidebarHTML}
-  </div>
-  <span class="price">${displayedPrice}</span>
-    </div>
-            </li>
-            </a>
-        `;
+    <span class="price">${displayedPrice}</span>
+      </div>
+  </li>
+    `;
 
     sidebarElement.innerHTML += sideBarproductHTML;
   }
@@ -118,6 +116,7 @@ let orderList = JSON.parse(localStorage.getItem("orderList"))
 function getCustomer() {
   let customerInfo = {
     id: parseInt(Math.random()*1000),
+    date: new Date().toLocaleDateString('vi-VI'),
     firstName: document.querySelector("#co-fname").value,
     lastName: document.querySelector("#co-lname").value,
     company: document.querySelector("#co-companyName").value,

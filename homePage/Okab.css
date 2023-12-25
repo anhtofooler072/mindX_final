@@ -397,6 +397,9 @@ body {
 }
 .post-content .page-banner {
   position: relative;
+  width: 75%;
+  margin: auto;
+  margin-bottom: 20px;
 }
 .page-banner .banner-img {
   width: 100%;
@@ -837,9 +840,9 @@ button:focus {
   .short-menu-header-box {
     display: block;
   }
-  .dima-slider .owl-carousel .owl-item img {
+  /* .dima-slider .owl-carousel .owl-item img {
     display: none;
-  }
+  } */
   .event-description .discount-slider {
     font-size: 50px;
   }
@@ -886,6 +889,34 @@ button:focus {
   .item-list .item-carousel-arrvial-1 .item-buy-box {
     width: 100%;
   }
+  /* reponsive thêm */
+  .new-arrival #product-list .product-contentContainer{
+    width: 50%;
+  }
+  .filter-bars ul li{
+    margin: 0px 8px 8px 0px;
+    padding: 15px 30px;
+    width: 30%;
+  }
+  .core_value{
+    display: block;
+  }
+  .core_value_inner{
+    width: 60%;
+    margin: auto;
+  }
+  .core_value_inner span{
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-size: 40px;
+  }
+  .core_value_inner h5{
+    font-size: 20px;
+  }
+  .core_value_inner p{
+    font-size: 16px;
+  }
+  /* reponsive thêm */
   .post-content .item-collection-box {
     flex-direction: column;
     height: 100%;
@@ -934,6 +965,39 @@ button:focus {
   .styleIntro .style {
     width: 100%;
   }
+  /* reponsive thêm */
+  .footer-contentContainer{
+    display: block;
+  }
+  .footer-contentContainer_item{
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .footer-contentContainer_item ul li a{
+    font-size: 16px;
+  }
+  .bottom_footer{
+    display: block;
+    padding: 20px 60px;
+  }
+  .bottom_footer .bottom_footer_left p{
+    width: 80%;
+    font-size: 14px;
+    margin-left: auto;
+  }
+  .bottom_navbar_right{
+    width: 100%;
+  }
+  .bottom_footer .bottom_navbar_right ul{
+    width: 65%;
+    margin-left: auto;
+    gap: 20px;
+  }
+  .bottom_footer .bottom_navbar_right ul li a{
+    font-size: 12px;
+    color: white;
+  }
+  /* reponsive thêm */
 }
 @media only screen and (max-width: 767px) {
   .dima-header-menu {
@@ -976,9 +1040,9 @@ button:focus {
   .slider-2 .img-slider-2 {
     height: unset;
   }
-  .dima-slider .owl-carousel .owl-item img {
+  /* .dima-slider .owl-carousel .owl-item img {
     display: none;
-  }
+  } */
   .event-description .discount-slider {
     font-size: 40px;
   }
@@ -1022,12 +1086,41 @@ button:focus {
     height: 377px;
     margin-bottom: 30px;
   }
-  .page-banner .banner-img {
+  /* .page-banner .banner-img {
     display: none;
-  }
+  } */
   .item-list .item-carousel-arrvial-1 .item-buy-box {
     width: 100%;
   }
+  /* reponsive thêm */
+  .new-arrival #product-list .product-contentContainer{
+    width: 100%;
+  }
+  .filter-bars ul li{
+    margin: 4px 0px;
+    padding: 15px 30px;
+    width: 45%;
+  }
+  .core_value{
+    display: block;
+    padding: 50px 0;
+  }
+  .core_value_inner{
+    width: 80%;
+    margin: auto;
+  }
+  .core_value_inner span{
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-size: 40px;
+  }
+  .core_value_inner h5{
+    font-size: 20px;
+  }
+  .core_value_inner p{
+    font-size: 14px;
+  }
+  /* reponsive thêm */
   .post-content .item-collection-box {
     flex-direction: column;
     height: 100%;
@@ -1101,6 +1194,39 @@ button:focus {
     right: 30px !important;
     top: 150px !important;
   }
+  /* reponsive thêm */
+  .footer-contentContainer{
+    display: block;
+  }
+  .footer-contentContainer_item{
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .footer-contentContainer_item ul li a{
+    font-size: 16px;
+  }
+  .bottom_footer{
+    display: block;
+    padding: 20px 25px;
+  }
+  .bottom_footer .bottom_footer_left p{
+    width: 80%;
+    font-size: 14px;
+    margin-left: auto;
+  }
+  .bottom_navbar_right{
+    width: 100%;
+  }
+  .bottom_footer .bottom_navbar_right ul{
+    /* width: 65%; */
+    /* margin-left: auto; */
+    gap: 15px;
+  }
+  .bottom_footer .bottom_navbar_right ul li a{
+    font-size: 12px;
+    color: white;
+  }
+  /* reponsive thêm */
 }
 
 

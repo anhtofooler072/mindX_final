@@ -301,9 +301,8 @@
             <div class="co-address">
                 <form class="co-form form-address">
                     <label for="co-addressForm">Street address:</label><br>
-                    <input required type="text" id="co-addressForm1" name="co-addressForm" placeholder="House number and street name">
-                    <input required type="text" id="co-addressForm2" name="co-addressForm" placeholder="Apartment, suite, unit, etc. (optional)">
-                    <!-- sửa ID 2 input address ==============================================================================-->
+                    <input required type="text" id="co-addressForm" name="co-addressForm" placeholder="House number and street name">
+                    <input required type="text" id="co-addressForm" name="co-addressForm" placeholder="Apartment, suite, unit, etc. (optional)">
                 </form>
             </div>
             <div class="co-zip">
@@ -333,7 +332,7 @@
             <textarea name="co-notes" id="co-notes" cols="40" rows="10" placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
         </div>
         <div class="your-order co-col">
-            <h4>Your order</h4>
+            <h3>Your order</h3>
             <table>
                 <thead>
                     <tr>
@@ -358,77 +357,107 @@
                     </tr> -->
                 </tfoot>
             </table>
-            <button class="btn-red" onclick="getCustomer()">Place order</button>
-            <!-- add function==================================================================================================== -->
+            <button class="btn-red">Place order</button>
         </div>
-        <div class="allProduct-right co-col">
+        <!-- fix html slidebar sidebar -->
+        <div class="allProduct-right">
             <div class="allProduct-right-search-section">
               <h5 class="search-bar-title">SEARCH PRODUCT</h5>
-              <form action="" class="search-bar">
-                <span class="search-bar-icon"><i class="fa fa-search" aria-hidden="true"></i></span>
-                <label class="screen-reader-text" for="search-bar-field">Search for:</label>
-                <input type="search" id="search-bar-field" placeholder="Search products...">
-
-
+              <form
+                action=""
+                class="search-bar">
+                <span class="search-bar-icon"
+                  ><i
+                    class="fa fa-search"
+                    aria-hidden="true"></i
+                ></span>
+                <label
+                  class="screen-reader-text"
+                  for="search-bar-field"
+                  >Search for:</label
+                >
+                <input
+                  type="search"
+                  id="search-bar-field"
+                  placeholder="Search products..." />
               </form>
             </div>
             <div class="products-sidebar">
               <h5 class="products-sidebar-title">Products</h5>
-              <ul class="products-sidebar-showcase">
-
-              </ul>
+              <ul class="products-sidebar-showcase"></ul>
             </div>
             <div class="product-tags">
               <h5 class="product-tags-title">PRODUCT TAGS</h5>
               <div class="tag-btn">
-                <a href="../All products/Product tags/Black/black.html"><button href="#" class="tag-btn-content black-tags">black</button></a>
-                <a href="../All products/Product tags/Boots/boots.html"><button  class="tag-btn-content boots-tags">boots</button></a>
-                <a href="../All products/Product tags/Cotton/cotton.html"><button  class="tag-btn-content cotton-tags">Cotton</button></a>
-                <a href="../All products/Product tags/Glasses/glasses.html"><button class="tag-btn-content glasses-tags">glasses</button></a>
-                <a href="../All products/Product tags/Red/red.html"><button class="tag-btn-content red-tags">Red</button></a>
-                <a href="../All products/Product tags/Shoes/shoes.html"><button class="tag-btn-content shoes-tags">shoes</button></a>
-                <a href="../All products/Product tags/Yepme/yepme.html"><button class="tag-btn-content yepme-tags">Yepme</button></a>
+                <a href="../All products/Product tags/Black/black.html"
+                  ><button
+                    href="#"
+                    class="tag-btn-content black-tags">
+                    black
+                  </button></a
+                >
+                <a href="../All products/Product tags/Boots/boots.html"
+                  ><button class="tag-btn-content boots-tags">boots</button></a
+                >
+                <a href="../All products/Product tags/Cotton/cotton.html"
+                  ><button class="tag-btn-content cotton-tags">Cotton</button></a
+                >
+                <a href="../All products/Product tags/Glasses/glasses.html"
+                  ><button class="tag-btn-content glasses-tags">
+                    glasses
+                  </button></a
+                >
+                <a href="../All products/Product tags/Red/red.html"
+                  ><button class="tag-btn-content red-tags">Red</button></a
+                >
+                <a href="../All products/Product tags/Shoes/shoes.html"
+                  ><button class="tag-btn-content shoes-tags">shoes</button></a
+                >
+                <a href="../All products/Product tags/Yepme/yepme.html"
+                  ><button class="tag-btn-content yepme-tags">Yepme</button></a
+                >
               </div>
             </div>
-        </div>
+          </div>
+          <!-- fix html sliderbar sidebar -->
     </section>
-      <!-- footer -->
-  <footer class="footer">
+    
+    <footer class="footer">
 
-    <!-- top footer -->
-    <div class="top_footer">
-      <div class="footer-contentContainer">
-        <div class="footer-contentContainer_item">
-          <h5>About</h5>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint
-            fuga porro amet deserunt, facere modi doloremque libero voluptate
-            commodi temporibus iure qui accusamus blanditiis ipsam error
-            similique autem! Delectus, totam?
-          </p>
-        </div>
-        <div class="footer-contentContainer_item">
-          <h5>Product Categories</h5>
-          <!-- list of 6 categories -->
-          <ul>
-            <li><a href="./allpages_minhhoang/Acessories/acessories.html">Accessories</a></li>
-            <li><a href="">Bags</a></li>
-            <li><a href="">Sabat</a></li>
-            <li><a href="">Shoes</a></li>
-            <li><a href="">Trapper</a></li>
-            <li><a href="">Uncategorized</a></li>
-          </ul>
-        </div>
-        <div class="footer-contentContainer_item">
-          <h5>Top Rated Product</h5>
-          <div class="topratedProducts">
+      <!-- top footer -->
+      <div class="top_footer">
+        <div class="footer-contentContainer">
+          <div class="footer-contentContainer_item">
+            <h5>About</h5>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint
+              fuga porro amet deserunt, facere modi doloremque libero voluptate
+              commodi temporibus iure qui accusamus blanditiis ipsam error
+              similique autem! Delectus, totam?
+            </p>
+          </div>
+          <div class="footer-contentContainer_item">
+            <h5>Product Categories</h5>
+            <!-- list of 6 categories -->
+            <ul>
+              <li><a href="../allpages_minhhoang/Acessories/">Accessories</a></li>
+              <li><a href="../allpages_minhhoang/Shoes/shoes.html">Bags</a></li>
+              <li><a href="../allpages_minhhoang/Acessories/">Sabat</a></li>
+              <li><a href="../allpages_minhhoang/Shoes/shoes.html">Shoes</a></li>
+              <li><a href="../allpages_minhhoang/Shoes/shoes.html">Trapper</a></li>
+              <li><a href="">Uncategorized</a></li>
+            </ul>
+          </div>
+          <div class="footer-contentContainer_item">
+            <h5>Top Rated Product</h5>
+            <div class="topratedProducts">
 
+            </div>
           </div>
         </div>
-      </div>
-      <!-- ======================================================= -->
+        <!-- ======================================================= -->
 
-    </div>
+      </div>
     </div>
   </footer>
   <!-- bottom footer -->
@@ -442,10 +471,10 @@
     <!-- bottom_navbar -->
     <div class="bottom_navbar_right">
       <ul>
-        <li><a href="#">HOME</a></li>
-        <li><a href="./allpages_minhhoang/All products/allProducts.html">ALL PRODUCT</a></li>
-        <li><a href="./allpages_minhhoang/Acessories/acessories.html">ACCESSORIES</a></li>
-        <li><a href="./allpages_minhhoang/Shoes/shoes.html">SHOES</a></li>
+        <li><a href="../../homePage/index.html">HOME</a></li>
+        <li><a href="../allpages_minhhoang/All products/allProducts.html">ALL PRODUCT</a></li>
+        <li><a href="../allpages_minhhoang/Acessories/acessories.html">ACCESSORIES</a></li>
+        <li><a href="../allpages_minhhoang/Shoes/shoes.html">SHOES</a></li>
       </ul>
     </div>
     <script src="./checkout.js"></script>
