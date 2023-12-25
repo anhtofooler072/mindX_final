@@ -114,6 +114,7 @@ document.querySelector(".total-render").innerHTML += totalOrder;
 // ==================================
 let orderList = JSON.parse(localStorage.getItem("orderList"))
 function getCustomer() {
+  console.log("11");
   let customerInfo = {
     id: parseInt(Math.random()*1000),
     date: new Date().toLocaleDateString('vi-VI'),
