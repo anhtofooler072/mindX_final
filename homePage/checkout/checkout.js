@@ -13,31 +13,33 @@ function renderSidebarProducts(products) {
 
     if (product.discount === "1") {
       displayedPrice = `
-        <del>$${product.price}</del>
-        <span>$${product.discountPrice}</span>
-      `;
+            <del>$${product.price}</del>
+            <span>$${product.discountPrice}</span>
+          `;
     } else {
-      displayedPrice = `$${product.price}`
+      displayedPrice = `$${product.price}`;
     }
 
     const starRatingSidebarHTML = getStarRatingSidebar(numberOfReviewsSideBars);
 
     const sideBarproductHTML = `
+    <a href="">
     <li>
     <a href="#">
-      <div class="sidebar-product-img">
-        <img src="${product.img[0]}"> 
-      </div>
-      <div class="products-sidebar-showcase-info">
-      <span class="sidebar-product-title">${product.productName}</span> 
-    </a>
-    <div class="star-rating" title="rated ${numberOfReviewsSideBars} out of 5" data-rating="${numberOfReviewsSideBars}">
-      ${starRatingSidebarHTML}
+    <div class="sidebar-product-img">
+      <img src="${product.img[0]}"> 
     </div>
-    <span class="price">${displayedPrice}</span>
-      </div>
-  </li>
-    `;
+    <div class="products-sidebar-showcase-info">
+    <span class="sidebar-product-title">${product.productName}</span> 
+  </a>
+  <div class="star-rating" title="rated ${numberOfReviewsSideBars} out of 5" data-rating="${numberOfReviewsSideBars}">
+    ${starRatingSidebarHTML}
+  </div>
+  <span class="price">${displayedPrice}</span>
+    </div>
+            </li>
+            </a>
+        `;
 
     sidebarElement.innerHTML += sideBarproductHTML;
   }
@@ -114,7 +116,6 @@ document.querySelector(".total-render").innerHTML += totalOrder;
 // ==================================
 let orderList = JSON.parse(localStorage.getItem("orderList"))
 function getCustomer() {
-  console.log("11");
   let customerInfo = {
     id: parseInt(Math.random()*1000),
     date: new Date().toLocaleDateString('vi-VI'),
@@ -131,13 +132,29 @@ function getCustomer() {
     notes: document.querySelector("#co-notes").value,
     orderItem,
   };
-  console.log(orderList);
-  orderList.push(customerInfo);
-  alert("Đặt hàng thành công!");
-  console.log(customerInfo);
-  localStorage.setItem("orderList", JSON.stringify(orderList));
-  localStorage.setItem("added-to-Cart", JSON.stringify([]));
-  window.location.replace("../Cart/cart.html")
+
+  // thay đoạn như này nhé
+  
+  const firstName = document.querySelector("#co-fname").value;
+  const lastName = document.querySelector("#co-lname").value;
+  const regionList = document.querySelector("#co-region-list").value;
+  const address1 = document.querySelector("#co-addressForm1").value;
+  const city = document.querySelector("#co-cityForm").value;
+  const phone = document.querySelector("#co-phone").value;
+  const email = document.querySelector("#co-email").value;
+  if (firstName=="" || lastName=="" || regionList=="" || address1=="" || city=="" || phone=="" || email=="") {
+    alert('Please fill in all required fields.');
+    return;
+  }
+  else{
+    orderList.push(customerInfo);
+    alert("Đặt hàng thành công!");
+    console.log(customerInfo);
+    localStorage.setItem("orderList", JSON.stringify(orderList));
+    localStorage.setItem("added-to-Cart", JSON.stringify([]));
+    window.location.replace("../Cart/cart.html")
+  }
+
 }
 
 // ===============================================================================================
